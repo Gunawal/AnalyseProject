@@ -46,7 +46,7 @@ jobs:
 
       # Étape 6 : Construction de l'image Docker
       - name: Construction de l'image Docker
-        run: docker build -t analyse-project:1.0 .
+        run: docker build -t analyse-project-dock:1.0 .
 
       # Étape 7 : Démarrage du conteneur Docker
       - name: Démarrage du conteneur Docker
@@ -54,7 +54,7 @@ jobs:
           docker run -d \
             --name analyse-ci \
             -p 8089:8089 \
-            analyse-project:1.0
+            analyse-project-dock:1.0
 
       # Étape 8 : Vérification du service SOAP
       - name: Vérification du service SOAP
