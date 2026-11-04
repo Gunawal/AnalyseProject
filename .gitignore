@@ -1,0 +1,15 @@
+
+# Fichiers générés par Maven
+/target/
+
+# Fichiers de configuration Eclipse
+.classpath
+.project
+.settings/
+
+# Fichiers de compilation Eclipse
+/bin/
+
+# Fichiers temporaires et système
+*.log
+.DS_Store
