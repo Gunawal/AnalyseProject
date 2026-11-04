@@ -26,3 +26,15 @@ jobs:
 
       - name: Compilation et tests Maven
         run: mvn -B -ntp clean verify
+
+      - name: Vérification du JAR
+        run: |
+          ls -lh target/
+          test -f target/AnalyseProject-0.0.1-SNAPSHOT.jar
+
+      - name: Sauvegarde du JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: analyseproject-jar
+          path: target/AnalyseProject-0.0.1-SNAPSHOT.jar
+          if-no-files-found: error
